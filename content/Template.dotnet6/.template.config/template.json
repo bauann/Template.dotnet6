@@ -1,0 +1,47 @@
+{
+    "$schema": "http://json.schemastore.org/template",
+    "author": "Victor Ko",
+    "classifications": [
+      "Custom Templates",
+      "WebApi"
+    ],
+    "identity": "pako.template.dotnet6.webapi",
+    "name": "WebAPI template with api versioning enable",
+    "shortName": "webapinet6",
+    "tags": {
+      "language": "C#",
+      "type": "project"
+    },
+    "sourceName": "Template.dotnet6.webapi",
+    "preferNameDirectory": true,
+    "symbols": {
+      "projectName": {
+        "type": "derived",
+        "valueSource": "name",
+        "valueTransform": "slnFileNameChange",
+        "fileRename": "Template.dotnet6",
+        "description": "Change solution file name"
+      }
+    },
+    "forms": {
+      "slnFileNameChange": {
+        "identifier": "replace",
+        "pattern": ".\\.sln",
+        "replacement": ""
+      }
+    },
+    "sources": [
+      {
+        "exclude": [
+          "**/.DS_Store/**",
+          "**/.git/**",
+          "**/.vscode/**",
+          "**/.idea/**",
+          "**/.template.config/**",
+          "**/[Bb]in/**",
+          "**/[Oo]bj/**",
+          "**/Readme.md/**"
+        ]
+      }
+    ]
+  }
