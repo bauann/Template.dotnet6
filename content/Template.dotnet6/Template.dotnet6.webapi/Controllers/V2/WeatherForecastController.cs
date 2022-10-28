@@ -1,13 +1,13 @@
 using Microsoft.AspNetCore.Mvc;
 
-namespace Template.dotnet6.webapi.Controllers;
+namespace Template.dotnet6.webapi.Controllers.V2;
 
-[ApiController,ApiVersion("1.0")]
+[ApiController, ApiVersion("2.0")]
 [Route("[controller]")]
 public class WeatherForecastController : ControllerBase
 {
     private static readonly string[] Summaries = new[]
-    {
+   {
         "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
     };
 
@@ -18,15 +18,19 @@ public class WeatherForecastController : ControllerBase
         _logger = logger;
     }
 
+    /// <summary>
+    /// 我是版本二的文件
+    /// </summary>
+    /// <param name="data">sample data</param>
+    /// <returns></returns>
     [HttpGet(Name = "GetWeatherForecast")]
-    public IEnumerable<WeatherForecast> Get()
+    public ActionResult Get(string data)
     {
-        return Enumerable.Range(1, 5).Select(index => new WeatherForecast
-            {
-                Date = DateTime.Now.AddDays(index),
-                TemperatureC = Random.Shared.Next(-20, 55),
-                Summary = Summaries[Random.Shared.Next(Summaries.Length)]
-            })
-            .ToArray();
+        return new ContentResult()
+        {
+            Content = "I am version 2",
+            ContentType = "text/plain;charset=utf-8",
+            StatusCode = StatusCodes.Status200OK
+        };
     }
 }
