@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package >
+  <metadata>
+    <id>pako.template.dotnet6.webapi</id>
+    <version>1.0.1</version>
+    <authors>victor</authors>
+    <owners>victor</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <license type="expression">MIT</license>
+    <description>Web API template which versioning feature enabled</description>
+    <releaseNotes>init release.</releaseNotes>
+    <copyright>Copyright 2022</copyright>
+    <tags>template</tags>
+    <packageTypes>
+      <packageType name="template" />
+    </packageTypes>
+  </metadata>
+</package>
